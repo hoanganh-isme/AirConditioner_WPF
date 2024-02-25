@@ -1,0 +1,57 @@
+﻿<Window x:Class="AirConditionerSolution.WindowAddMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirConditionerSolution"
+        mc:Ignorable="d"
+        Title="WindowAddMember" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFF67FA9" Offset="1" />
+                <GradientStop Color="White" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30" Width="300" Height="50">
+            <TextBlock FontSize="25" FontFamily="Showcard Gothic"> Member Management</TextBlock>
+        </StackPanel>
+        <StackPanel Width="200" HorizontalAlignment="Left" Margin="20, 20, 0 ,20">
+            <StackPanel Orientation="Horizontal" Height="25" Margin="80,80,20,15">
+                <Label Content="FullName" FontWeight="Bold" ></Label>
+            </StackPanel>
+            <StackPanel Height="25" Margin="80,0,20,15">
+                <Label Content="Password" FontWeight="Bold" ></Label>
+            </StackPanel>
+
+            <StackPanel Height="25" Margin="80,0,20,15">
+                <Label Content="EmailAddress" FontWeight="Bold" ></Label>
+            </StackPanel>
+            <StackPanel Height="25" Margin="80,0,20,15">
+                <Label Content="Role" FontWeight="Bold" ></Label>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Width="600" HorizontalAlignment="Right" Margin="20, 20, 0 ,20">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="20,75,20,15">
+                    <TextBox x:Name="txt_FullName" Width="300"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="20,0,20,15">
+                    <TextBox x:Name="txt_Password" Width="300"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="20,0,20,15">
+                    <TextBox x:Name="txt_Email" Width="300"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="20,0,20,15">
+                    <ComboBox x:Name="cbx_Role" Width="200"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_Add" Margin="50, 20,10,10" Width="100" HorizontalAlignment="Left" Content="Add" FontWeight="Bold" Click="btn_Add_Click"></Button>
+                    <Button x:Name="btn_Back" Margin="50, 20,200,10" Width="100" HorizontalAlignment="Right" Content="Back" FontWeight="Bold" Click="btn_Back_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="AirConditionerSolution.AirConditionDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirConditionerSolution"
+        mc:Ignorable="d"
+        Title="AirConditionDetail" Height="400" Width="500">
+    <Grid>
+        <Canvas Margin="0,0,0,-13">
+            <Label Content="AirCondition Shop" Canvas.Left="170" Canvas.Top="10" FontWeight="Bold" FontSize="20" Background="#FFFDE9E9" Foreground="#FF0EF176" BorderBrush="#FFCE1818"></Label>
+            <Label Content="AirConditionerId" HorizontalAlignment="Left" Canvas.Left="17" VerticalAlignment="Top" FontWeight="Bold" FontSize="9" Canvas.Top="75"/>
+            <TextBox x:Name="txt_AirConditionerId"  Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="70" Width="320" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" VerticalContentAlignment="Center"/>
+            <Label Content="AirConditionerName" Canvas.Left="16" Canvas.Top="103" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9"/>
+            <TextBox x:Name="txt_AirConditionerName"  Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="98" Width="320" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Label Content="Warranty" HorizontalAlignment="Left" Canvas.Left="17" VerticalAlignment="Top" Canvas.Top="130" FontWeight="Bold" FontSize="9" RenderTransformOrigin="0.682,-0.033"/>
+            <TextBox x:Name="txt_Warranty"  Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="125" Width="320" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" VerticalContentAlignment="Center"/>
+            <Label Content="SoundPressureLevel" HorizontalAlignment="Center" Canvas.Left="15" VerticalAlignment="Top" Canvas.Top="159" FontWeight="Bold" FontSize="9"/>
+            <TextBox x:Name="txt_SoundPressureLevel"  Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="154" Width="320" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" VerticalContentAlignment="Center"/>
+            <Label Content="FeatureFunction" Canvas.Left="14" Canvas.Top="184" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+            <TextBox x:Name="txt_FeatureFunction"  Canvas.Left="132" Canvas.Top="179" Width="320" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Label Content="Quantity" Canvas.Left="17" Canvas.Top="209" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+            <TextBox x:Name="txt_Quantity"  Canvas.Left="132" Canvas.Top="204" Width="320" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Label Content="DollarPrice" Canvas.Left="14" Canvas.Top="233" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+            <TextBox x:Name="txt_DollarPrice"  Canvas.Left="132" Canvas.Top="227" Width="320" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Label Content="Supplier" Canvas.Left="16" Canvas.Top="258" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="51" FontSize="9"/>
+            <ComboBox x:Name="cbx_SupplierId" 
+            ItemsSource="{Binding SupplierCompanies}"
+            DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" 
+            Canvas.Left="132" Canvas.Top="252" Width="173" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" VerticalContentAlignment="Center"/>
+            <Button x:Name="btn_Add" Content="Add" Canvas.Left="132" Canvas.Top="298" HorizontalAlignment="Left" VerticalAlignment="Center" Width="88" Height="33" Click="btn_Add_Click">
+            </Button>
+            <Button x:Name="btn_Close" Content="Close" Canvas.Left="315" Canvas.Top="298" Width="88" Height="33" Click="btn_Close_Click"></Button>
+        </Canvas>
+    </Grid>
+</Window>

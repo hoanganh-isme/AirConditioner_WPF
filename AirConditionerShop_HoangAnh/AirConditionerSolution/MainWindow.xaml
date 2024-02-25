@@ -1,0 +1,76 @@
+﻿<Window x:Class="AirConditionerSolution.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirConditionerSolution"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="900">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFB7CBC0" Offset="1" />
+                <GradientStop Color="#FFE9E2DB" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    
+    <Canvas x:Name="MainGUI" Loaded="MainGUI_Loaded" >
+        <GroupBox Height="280" Header="AirConditioner Info" Width="569" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="10" Canvas.Top="10">
+            <Canvas Margin="0,0,0,-13">
+                <Label Content="AirConditionerId" HorizontalAlignment="Left" Canvas.Left="16" VerticalAlignment="Top" FontWeight="Bold" FontSize="9" Canvas.Top="12"/>
+                <TextBox x:Name="txt_AirConditionerId" Text="{Binding Path=AirConditionerId, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="4" Width="409" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" VerticalContentAlignment="Center"/>
+                <Label Content="AirConditionerName" Canvas.Left="18" Canvas.Top="43" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9"/>
+                <TextBox x:Name="txt_AirConditionerName" Text="{Binding Path=AirConditionerName, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="32" Width="409" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Content="Warranty" HorizontalAlignment="Center" Canvas.Left="18" VerticalAlignment="Top" Canvas.Top="68" FontWeight="Bold" FontSize="9" RenderTransformOrigin="0.682,-0.033"/>
+                <TextBox x:Name="txt_Warranty" Text="{Binding Path=Warranty, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="59" Width="409" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" VerticalContentAlignment="Center"/>
+                <Label Content="SoundPressureLevel" HorizontalAlignment="Left" Canvas.Left="16" VerticalAlignment="Top" Canvas.Top="93" FontWeight="Bold" FontSize="9"/>
+                <TextBox x:Name="txt_SoundPressureLevel" Text="{Binding Path=SoundPressureLevel, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" TextWrapping="Wrap" Canvas.Top="88" Width="409" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" VerticalContentAlignment="Center"/>
+                <Label Content="FeatureFunction" Canvas.Left="16" Canvas.Top="121" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+                <TextBox x:Name="txt_FeatureFunction" Text="{Binding Path=FeatureFunction, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" Canvas.Top="113" Width="409" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <Label Content="Quantity" Canvas.Left="16" Canvas.Top="143" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+                <TextBox x:Name="txt_Quantity" Text="{Binding Path=Quantity, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" Canvas.Top="138" Width="409" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <Label Content="DollarPrice" Canvas.Left="16" Canvas.Top="166" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.734,0.623"/>
+                <TextBox x:Name="txt_DollarPrice" Text="{Binding Path=DollarPrice, Mode=OneWay}" DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" Canvas.Left="132" Canvas.Top="161" Width="409" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <Label Content="Supplier" Canvas.Left="18" Canvas.Top="189" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="51" FontSize="9"/>
+                <ComboBox x:Name="cbx_SupplierId" 
+          Text="{Binding Path=Supplier.SupplierName, Mode=OneWay}" 
+          ItemsSource="{Binding SupplierCompanies}"
+          DataContext="{Binding ElementName=dtg_AirConditioner, Path=SelectedItem}" 
+          Canvas.Left="132" Canvas.Top="186" Width="173" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" VerticalContentAlignment="Center"/>
+
+            </Canvas>
+        </GroupBox>
+        <GroupBox Height="280" Header="Operator" Width="179" Canvas.Left="675" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Canvas>
+                <Button x:Name="btn_Edit" Content="Edit" Canvas.Left="32" Canvas.Top="51" Height="32" Width="114" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.535,-0.483" Click="btn_Edit_Click" Background="LightBlue"/>
+                <Button x:Name="btn_Delete" Content="Delete" Canvas.Left="32" Canvas.Top="93" Height="32" Width="114" RenderTransformOrigin="0.535,-0.483" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btn_Delete_Click" Background="LightCoral"/>
+                <Button x:Name="btn_LoadFile" Content="Load Product" Canvas.Left="32" Canvas.Top="136" Height="32" Width="114" RenderTransformOrigin="0.535,-0.483" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btn_LoadFile_Click" Background="LightGreen"/>
+                <Button x:Name="btn_Logout" Content="Log out" Canvas.Left="32" Canvas.Top="178" Height="32" Width="114" RenderTransformOrigin="0.535,-0.483" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btn_Logout_Click" Background="LightGray"/>
+                <Button x:Name="btn_Add" Content="Add" Canvas.Left="32" Canvas.Top="8" Height="32" Width="114" RenderTransformOrigin="0.535,-0.483" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btn_Add_Click" Background="#FFE6ADC2"/>
+
+            </Canvas>
+        </GroupBox>
+        <GroupBox Height="301" Header="AirConditioners" Width="860" Canvas.Left="10" Canvas.Top="368" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <DataGrid x:Name="dtg_AirConditioner" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="0,0,0,-10">
+                <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding AirConditionerId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding AirConditionerName}" Width="120"  IsReadOnly="True"/>
+                    <!-- Giới hạn chiều rộng của cột "Name" thành 150 pixel -->
+                        <DataGridTextColumn Header="Warranty" Binding="{Binding Warranty}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="SoundPressureLevel" Binding="{Binding SoundPressureLevel}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="FeatureFunction" Binding="{Binding FeatureFunction}" Width="150" IsReadOnly="True" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="DollarPrice" Binding="{Binding DollarPrice}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier.SupplierName}" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <Label Content="Search by Name" Canvas.Left="25" Canvas.Top="334" HorizontalAlignment="Left" VerticalAlignment="Center" Width="94" Height="23"></Label>
+        <TextBox x:Name="txt_SearchByName" VerticalContentAlignment="Center" Canvas.Left="136" TextWrapping="Wrap" Canvas.Top="330" Width="174" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txt_Search_TextChanged"></TextBox>
+        <Button x:Name="btn_SearchByName" Content="Search" Canvas.Left="320" Canvas.Top="331" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="31" Click="btn_SearchByName_Click" Background="#FF6136F4"></Button>
+        <Label Content="Search" Canvas.Left="515" Canvas.Top="334" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Height="23"/>
+        <TextBox x:Name="txt_Search" VerticalContentAlignment="Center" Canvas.Left="588" TextWrapping="Wrap" Canvas.Top="331" Width="174" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="txt_Search_TextChanged"/>
+        <Button x:Name="btn_Search" Content="Search" Canvas.Left="783" Canvas.Top="331" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="31" Click="btn_Search_Click" Background="#FF36E6F4"/>
+    </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="AirConditionerSolution.UserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirConditionerSolution"
+        mc:Ignorable="d"
+        Title="UserPage" Height="450" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFF67FA9" Offset="1" />
+                <GradientStop Color="White" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" Width="330">
+            <TextBox FontSize="25" FontWeight="Bold" FontFamily="Snap ITC" >AirConditioner Shop</TextBox>
+        </StackPanel>
+        <DataGrid x:Name="dtg_AirConditioner" d:ItemsSource="{d:SampleData ItemCount=5}" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="0,73,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding AirConditionerId}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding AirConditionerName}" Width="100" IsReadOnly="True"/>
+                <!-- Giới hạn chiều rộng của cột "Name" thành 150 pixel -->
+                <DataGridTextColumn Header="Warranty" Binding="{Binding Warranty}" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Header="SoundPressureLevel" Binding="{Binding SoundPressureLevel}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="FeatureFunction" Binding="{Binding FeatureFunction}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="DollarPrice" Binding="{Binding DollarPrice}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier.SupplierName}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="Action" Width="160">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Height="30" Width="60" Click="AddButton_Click">Add</Button>
+                                <Button Height="30" Width="60" Click="ViewButton_Click">View</Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

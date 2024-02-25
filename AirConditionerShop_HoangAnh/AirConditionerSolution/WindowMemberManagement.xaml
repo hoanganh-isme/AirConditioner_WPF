@@ -1,0 +1,64 @@
+﻿<Window x:Class="AirConditionerSolution.WindowMemberManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirConditionerSolution"
+        mc:Ignorable="d"
+        Title="WindowMemberManagement" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFF67FA9" Offset="1" />
+                <GradientStop Color="White" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackPanel HorizontalAlignment="Left" Width="200">
+            <Button Width="130" Margin="30" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" 
+                materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#D94448"
+                Background="#D94448" Foreground="White" ToolTip="MemberManagement" x:Name="btnBack" Click="btnBack_Click" Content="Back">
+            </Button>
+        </StackPanel>
+
+        <Grid Margin="100, 80, 80,50" >
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="dtg_Member" d:ItemsSource="{d:SampleData ItemCount=7}" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionChanged="dtg_Member_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Width="70" Binding="{Binding MemberId}" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Header="FullName" Width="150" Binding="{Binding FullName}" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Header="EmailAddress" Width="150" Binding="{Binding EmailAddress}" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Role" Width="100" Binding="{Binding Role, Mode=OneWay}" ></DataGridTextColumn>
+
+                        <DataGridTemplateColumn Header="Action">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Height="30" Width="50" Click="EditButton_Click" Foreground="#FF2BE222">
+                                            <materialDesign:PackIcon Kind="Pencil" VerticalAlignment="Center" Width="20" Margin="0 0 5 0"/>
+                                        </Button>
+                                        <Button Height="30" Width="50" Click="DeleteButton_Click">
+                                            <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </Grid>
+
+        <StackPanel HorizontalAlignment="Center" Width="330">
+            <TextBox FontSize="25" FontWeight="Bold" FontFamily="Snap ITC" >Member Management</TextBox>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" Width="200">
+            <Button Width="130" Margin="30" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" 
+                materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#D94448"
+                Background="#D94448" Foreground="White" ToolTip="MemberManagement" x:Name="btnMember" Click="btnMember_Click" Content="Add Member">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
