@@ -18,7 +18,7 @@
         </Border>
         <StackPanel Orientation="Horizontal">
             <StackPanel Width="350">
-                <Image Source="D:\FPT\Spring2024\PRN221\Code\AirConditionerShop_HoangAnh\AirConditionerSolution\Images\ICON4802.png" Width="300" Height="300" VerticalAlignment="Top" Margin="30" Stretch="Fill" />
+                <Image Source="D:\FPT\Spring2024\PRN221\Code\AirConditioner_WPF\AirConditionerShop_HoangAnh\AirConditionerSolution\Images\ICON4802.png" Width="300" Height="300" VerticalAlignment="Top" Margin="30" Stretch="Fill" />
             </StackPanel>
             <StackPanel Width="350">
                 <StackPanel Margin="20 40">

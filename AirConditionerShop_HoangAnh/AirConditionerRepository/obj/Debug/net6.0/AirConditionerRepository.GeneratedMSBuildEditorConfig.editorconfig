@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AirConditionerRepository
-build_property.ProjectDir = D:\FPT\Spring2024\PRN221\Code\AirConditionerShop_HoangAnh\AirConditionerRepository\
+build_property.ProjectDir = D:\FPT\Spring2024\PRN221\Code\AirConditioner_WPF\AirConditionerShop_HoangAnh\AirConditionerRepository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

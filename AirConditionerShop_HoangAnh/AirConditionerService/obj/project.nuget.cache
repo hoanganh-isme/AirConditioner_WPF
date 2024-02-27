@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XDDXoDHqbfZT2H1hXgYZV5/MShUULDNBCYvfPRo/mxWct0222a/pFsnM564Jy5UB+6zrv10siSBZzjK9V01SSg==",
+  "dgSpecHash": "mt8o/KyFm8gf9TErKlsnd+K27u8o+KKGryU/H7Er0NRUkmyCS0FaUA+YIS0/NNH2X3BLcgsH5/TuKCKh8xLRLw==",
   "success": true,
-  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditionerShop_HoangAnh\\AirConditionerService\\AirConditionerService.csproj",
+  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditioner_WPF\\AirConditionerShop_HoangAnh\\AirConditionerService\\AirConditionerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

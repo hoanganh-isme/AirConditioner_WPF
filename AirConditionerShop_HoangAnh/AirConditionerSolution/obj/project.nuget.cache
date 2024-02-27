@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lfclq7up9D1HmI0RD5ad9gp5yw6nGVu9NPXnbTFYOK71Nv0OemabTroeVh9wobQbigK+dJrLp/+2M7Ur1R4VRg==",
+  "dgSpecHash": "JEntGmkKvrOH2FDjgIm6VR76i3YbyP57Plm60B8WQy0bIXJxXrElhF3VayRBY8HOaOPrD3m3Ey6PHcK1P9btMQ==",
   "success": true,
-  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditionerShop_HoangAnh\\AirConditionerSolution\\AirConditionerSolution.csproj",
+  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditioner_WPF\\AirConditionerShop_HoangAnh\\AirConditionerSolution\\AirConditionerSolution.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",

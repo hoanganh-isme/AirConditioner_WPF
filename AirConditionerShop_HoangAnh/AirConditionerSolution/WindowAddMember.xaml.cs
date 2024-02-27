@@ -78,7 +78,7 @@ namespace AirConditionerSolution
                     if (isSuccess)
                     {
                         MessageBox.Show("Insert Success!");
-                        WindowManagement mainWindow = new WindowManagement();
+                        WindowMemberManagement mainWindow = new WindowMemberManagement();
                         mainWindow.Show();
                         Close();
                     }

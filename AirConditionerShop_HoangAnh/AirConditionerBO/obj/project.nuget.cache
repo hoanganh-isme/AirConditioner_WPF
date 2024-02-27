@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GMilydfJrlNBG4dRIVJfgc2nnFJ8Ht2i1Y80NPbP8GBk8KhRv9i/tuRlWmrFVN1gtfrki1KP3G5r7Ow5O0zlwA==",
+  "dgSpecHash": "JkO/vfVwi2J0/ccz3Yd9K6L4mB+i3N7N38LYrAAxgYq7u2wC9obn9xPU4AZIeR2EHQc3PZEGURlrFDfbr6KF2w==",
   "success": true,
-  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditionerShop_HoangAnh\\AirConditionerBO\\AirConditionerBO.csproj",
+  "projectFilePath": "D:\\FPT\\Spring2024\\PRN221\\Code\\AirConditioner_WPF\\AirConditionerShop_HoangAnh\\AirConditionerBO\\AirConditionerBO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HOANG ANH\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
